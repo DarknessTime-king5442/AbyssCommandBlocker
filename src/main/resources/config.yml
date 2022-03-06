@@ -1,0 +1,5 @@
+blocked-commands:
+    - "/pl"
+
+blocked-message:
+    - "&b&lAbyss &8- &bYou cannot do this!"
