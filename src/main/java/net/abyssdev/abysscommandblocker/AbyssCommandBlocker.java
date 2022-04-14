@@ -17,6 +17,7 @@ public final class AbyssCommandBlocker extends JavaPlugin implements Listener {
     private final String[] blockedCommands = this.getConfig().getStringList("blocked-commands").toArray(new String[0]);
     private final String[] blockedMessage = new String[this.getConfig().getStringList("blocked-message").size()];
 
+    @Override
     public void onEnable() {
         this.saveDefaultConfig();
 
