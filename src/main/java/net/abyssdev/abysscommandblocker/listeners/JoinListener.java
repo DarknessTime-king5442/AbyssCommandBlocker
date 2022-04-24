@@ -1,5 +1,6 @@
 package net.abyssdev.abysscommandblocker.listeners;
 
+import net.abyssdev.abysscommandblocker.AbyssCommandBlocker;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -10,9 +11,16 @@ import java.util.Arrays;
 
 public final class JoinListener implements Listener {
 
-    private final String user = "%%_USER_%%";
-    private final String time = "%%_TIME_%%";
-    private final String id = "%%_IDLONG_%%";
+    private final String user;
+    private final String time;
+    private final String id;
+
+    public JoinListener() {
+        this.user = "%%_USER_%%";
+        this.time = "%%_TIME_%%";
+        this.id = "%%_IDLONG_%%";
+    }
+
 
     @EventHandler
     public void onJoin(final PlayerJoinEvent event) {
