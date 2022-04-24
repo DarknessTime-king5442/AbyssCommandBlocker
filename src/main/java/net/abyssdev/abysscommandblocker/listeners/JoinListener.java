@@ -10,9 +10,15 @@ import java.util.Arrays;
 
 public final class JoinListener implements Listener {
 
-    private static String USER = "%%_USER_%%";
-    private static String TIME = "%%_TIME_%%";
-    private static String ID = "%%_IDLONG_%%";
+    private final static String USER;
+    private final static String TIME;
+    private final static String ID;
+
+    static {
+        USER = "%%_USER_%%";
+        TIME = "%%_TIME_%%";
+        ID = "%%_IDLONG_%%";
+    }
 
     @EventHandler
     public void onJoin(final PlayerJoinEvent event) {
