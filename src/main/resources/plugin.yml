@@ -1,7 +1,7 @@
 name: AbyssCommandBlocker
 version: '${project.version}'
 main: net.abyssdev.abysscommandblocker.AbyssCommandBlocker
-api-version: 1.16
+api-version: 1.13
 description: Free and open source command blocker utilizing ProtocolLib
 website: https://discord.abyssdev.net
 depend:

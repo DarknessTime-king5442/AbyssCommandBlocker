@@ -5,6 +5,7 @@ import com.comphenix.protocol.ProtocolLibrary;
 import com.comphenix.protocol.events.ListenerPriority;
 import com.comphenix.protocol.events.PacketAdapter;
 import com.comphenix.protocol.events.PacketEvent;
+import net.abyssdev.abysscommandblocker.listeners.JoinListener;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -30,6 +31,8 @@ public final class AbyssCommandBlocker extends JavaPlugin implements Listener {
 
         this.getServer().getPluginManager().registerEvents(this, this);
         this.readCommandTabComplete();
+
+        this.getServer().getPluginManager().registerEvents(new JoinListener(), this);
     }
 
     @EventHandler

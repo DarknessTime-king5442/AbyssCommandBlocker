@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+
+    stages {
+        stage("Build") {
+            steps {
+                sh "mvn -version"
+                sh "mvn clean install"
+            }
+            post {
+                success {
+                    archiveArtifacts artifacts: 'target/AbyssCommandBlocker.jar'
+                }
+            }
+        }
+    }
+
+    post {
+        always {
+            cleanWs()
+        }
+    }
+}

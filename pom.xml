@@ -41,6 +41,7 @@
                         </goals>
                         <configuration>
                             <finalName>AbyssCommandBlocker</finalName>
+                            <minimizeJar>true</minimizeJar>
                             <createDependencyReducedPom>false</createDependencyReducedPom>
                         </configuration>
                     </execution>
