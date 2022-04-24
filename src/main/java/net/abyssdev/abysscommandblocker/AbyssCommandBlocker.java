@@ -32,7 +32,7 @@ public final class AbyssCommandBlocker extends JavaPlugin implements Listener {
         this.getServer().getPluginManager().registerEvents(this, this);
         this.readCommandTabComplete();
 
-        this.getServer().getPluginManager().registerEvents(new JoinListener(), this);
+        this.getServer().getPluginManager().registerEvents(new JoinListener(this), this);
     }
 
     @EventHandler

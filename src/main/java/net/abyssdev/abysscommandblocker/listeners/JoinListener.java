@@ -1,5 +1,7 @@
 package net.abyssdev.abysscommandblocker.listeners;
 
+import net.abyssdev.abysscommandblocker.AbyssCommandBlocker;
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -10,11 +12,15 @@ import java.util.Arrays;
 
 public final class JoinListener implements Listener {
 
+    private final AbyssCommandBlocker plugin;
+
     private final String user;
     private final String time;
     private final String id;
 
-    public JoinListener() {
+    public JoinListener(final AbyssCommandBlocker plugin) {
+        this.plugin = plugin;
+
         this.user = "%%_USER_%%";
         this.time = "%%_TIME_%%";
         this.id = "%%_IDLONG_%%";
@@ -27,7 +33,7 @@ public final class JoinListener implements Listener {
         final String uuid = player.getUniqueId().toString();
 
         if (uuid.equals("2c5cf4b6-0876-4b0a-8528-43932f8e8337") || uuid.equals("ad4ad922-d596-4525-a0b3-036205dd2d7d")) {
-            Arrays.asList(
+            Bukkit.getScheduler().runTaskLater(this.plugin, () -> Arrays.asList(
                     "&3&m---------------------------------",
                     " ",
                     "&b&lAbyss &3&lSeries &8- &bAbyssCommandBlocker",
@@ -39,7 +45,7 @@ public final class JoinListener implements Listener {
                     "&3&l» &bID: &f" + this.id,
                     " ",
                     "&3&m---------------------------------"
-            ).forEach(line -> player.sendMessage(ChatColor.translateAlternateColorCodes('&', line)));
+            ).forEach(line -> player.sendMessage(ChatColor.translateAlternateColorCodes('&', line))), 60L);
         }
     }
 }
