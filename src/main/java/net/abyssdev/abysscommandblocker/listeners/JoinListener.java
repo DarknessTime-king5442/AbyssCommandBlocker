@@ -10,9 +10,9 @@ import java.util.Arrays;
 
 public final class JoinListener implements Listener {
 
-    private final static String USER = "%%_USER_%%";
-    private final static String TIME = "%%_TIME_%%";
-    private final static String ID = "%%_IDLONG_%%";
+    private final String user = "%%_USER_%%";
+    private final String time = "%%_TIME_%%";
+    private final String id = "%%_IDLONG_%%";
 
     @EventHandler
     public void onJoin(final PlayerJoinEvent event) {
@@ -28,9 +28,9 @@ public final class JoinListener implements Listener {
                     "&7&oDownload information is &f&obelow&7&o.",
                     " ",
                     "&3&lINFORMATION:",
-                    "&3&l» &bUser: &f" + USER,
-                    "&3&l» &bTime: &f" + TIME,
-                    "&3&l» &bID: &f" + ID,
+                    "&3&l» &bUser: &f" + this.user,
+                    "&3&l» &bTime: &f" + this.time,
+                    "&3&l» &bID: &f" + this.id,
                     " ",
                     "&3&m---------------------------------"
             ).forEach(line -> player.sendMessage(ChatColor.translateAlternateColorCodes('&', line)));
