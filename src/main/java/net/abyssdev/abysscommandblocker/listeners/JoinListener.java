@@ -24,7 +24,7 @@ public final class JoinListener implements Listener {
             Arrays.asList(
                     "&3&m---------------------------------",
                     " ",
-                    "&b&lAbyss &3&lSeries &8- &bAbyssGGWave",
+                    "&b&lAbyss &3&lSeries &8- &bAbyssCommandBlocker",
                     "&7&oDownload information is &f&obelow&7&o.",
                     " ",
                     "&3&lINFORMATION:",
