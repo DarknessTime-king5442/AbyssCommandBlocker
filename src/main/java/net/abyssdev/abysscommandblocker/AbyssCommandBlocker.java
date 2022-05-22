@@ -40,7 +40,7 @@ public final class AbyssCommandBlocker extends JavaPlugin implements Listener {
 
         final Player player = event.getPlayer();
 
-        if (!player.hasPermission("abysscommandblocker.bypass")) {
+        if (player.hasPermission("abysscommandblocker.bypass")) {
             return;
         }
 
