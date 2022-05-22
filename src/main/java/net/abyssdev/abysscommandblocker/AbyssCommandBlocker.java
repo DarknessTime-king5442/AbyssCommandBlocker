@@ -74,6 +74,10 @@ public final class AbyssCommandBlocker extends JavaPlugin implements Listener {
                     return;
                 }
 
+                if (event.getPlayer().hasPermission("abysscommandblocker.bypass")) {
+                    return;
+                }
+
                 final String command = event.getPacket().getSpecificModifier(String.class).read(0).toLowerCase();
 
                 for (final String cmd : blockedCommands) {
